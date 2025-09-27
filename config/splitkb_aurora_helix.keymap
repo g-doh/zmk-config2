@@ -28,6 +28,15 @@ However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'ei
 As such, those are in use within the default layer at this time.*/
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -46,7 +55,7 @@ As such, those are in use within the default layer at this time.*/
 &kp TAB           &kp Q   &kp W     &kp E     &kp R   &kp T                               &kp Y            &kp U          &kp I          &kp O       &kp P      &kp EQUAL
 &kp CAPS          &kp A   &kp S     &kp D     &kp F   &kp G                               &kp H            &kp J          &kp K          &kp L       &kp SEMI   &kp SQT
 &kp LSHFT         &kp Z   &kp X     &kp C     &kp V   &kp B      &trans       &kp DEL     &kp N            &kp M          &kp COMMA      &kp PERIOD  &kp SLASH  &kp BACKSLASH
-&kp LEFT_CONTROL  &trans  &kp LALT  &kp LGUI  &mo 1   &kp SPACE  &kp SPACE    &kp RETURN  &kp RIGHT_SHIFT  &kp BACKSPACE  &kp RIGHT_ALT  &kp LEFT    &kp DEL    &kp RIGHT
+&kp LEFT_CONTROL  &mo 3   &kp LALT  &kp LGUI  &mo 1   &kp SPACE  &kp SPACE    &kp RETURN  &kp RIGHT_SHIFT  &kp BACKSPACE  &kp RIGHT_ALT  &kp LEFT    &kp DEL    &kp RIGHT
             >;
         };
 
